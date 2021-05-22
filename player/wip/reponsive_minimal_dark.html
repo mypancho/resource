@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Easy Video Player</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1 user-scalable=no" />
+		
+		<script type="text/javascript" src="java/FWDEVPlayer.js"></script>
+		
+		<!-- Setup EVP -->
+		<script type="text/javascript">
+			FWDEVPUtils.onReady(function(){
+			
+				FWDEVPlayer.videoStartBehaviour = "pause";
+				
+				new FWDEVPlayer({		
+					//main settings
+					instanceName:"player1",
+					parentId:"myDiv",
+					mainFolderPath:"content",
+					initializeOnlyWhenVisible:"no",
+					skinPath:"minimal_skin_dark",
+					displayType:"responsive",
+					fillEntireVideoScreen:"no",
+					autoScale:"yes",
+					fillEntireVideoScreen:"no",
+					openDownloadLinkOnMobile:"no",
+					useHEXColorsForSkin:"no",
+					normalHEXButtonsColor:"#FF0000",
+					selectedHEXButtonsColor:"#FFFFFF",
+					privateVideoPassword:"428c841430ea18a70f7b06525d4b748a",
+					startAtTime:"",
+					stopAtTime:"",
+					startAtVideoSource:2,
+					videoSource:[
+						{source:"content/videos/fwd-480p.mp4", label:"small version"},
+						{source:"content/videos/fwd-720p.mp4", label:"hd720"},
+						{source:"content/videos/fwd-1080p.mp4", label:"hd1080"}
+					],
+					posterPath:"content/posters/mp4-poster.jpg, content/posters/mp4-poster-mobile.jpg",
+					showErrorInfo:"yes",
+					fillEntireScreenWithPoster:"yes",
+					rightClickContextMenu:"developer",
+					disableDoubleClickFullscreen:"no",
+					addKeyboardSupport:"yes",
+					useChromeless:"no",
+					showPreloader:"yes",
+					autoPlay:"no",
+					loop:"no",
+					scrubAtTimeAtFirstPlay:"00:00:00",
+					maxWidth:600,
+					maxHeight:380,
+					volume:.8,
+					greenScreenTolerance:200,
+					backgroundColor:"#000000",
+					posterBackgroundColor:"#0099FF",
+					//logo settings
+					showLogo:"yes",
+					hideLogoWithController:"yes",
+					logoPosition:"topRight",
+					logoLink:"http://www.webdesign-flash.ro",
+					logoMargins:5,
+					//controller settings
+					showController:"yes",
+					showControllerWhenVideoIsStopped:"yes",
+					showVolumeScrubber:"yes",
+					showVolumeButton:"yes",
+					showTime:"yes",
+					showQualityButton:"yes",
+					showSubtitleButton:"yes",
+					showShareButton:"yes",
+					showDownloadButton:"yes",
+					showFullScreenButton:"yes",
+					repeatBackground:"yes",
+					controllerHeight:41,
+					controllerHideDelay:3,
+					startSpaceBetweenButtons:7,
+					spaceBetweenButtons:9,
+					mainScrubberOffestTop:14,
+					scrubbersOffsetWidth:4,
+					timeOffsetLeftWidth:5,
+					timeOffsetRightWidth:3,
+					volumeScrubberWidth:80,
+					volumeScrubberOffsetRightWidth:0,
+					timeColor:"#777777",
+					youtubeQualityButtonNormalColor:"#777777",
+					youtubeQualityButtonSelectedColor:"#FFFFFF",
+					//cuepoints
+					executeCuepointsOnlyOnce:"no",
+					//annotations
+					annotiationsListId:"none",
+					showAnnotationsPositionTool:"no",
+					//subtitles
+					showSubtitleButton:"yes",
+					subtitlesOffLabel:"Subtitle off",
+					startAtSubtitle:1,
+					subtitlesSource:[
+						{subtitlePath:"content/english_subtitle.txt", subtileLabel:"English"},
+						{subtitlePath:"content/romanian_subtitle.txt", subtileLabel:"Romanian"},
+						{subtitlePath:"content/spanish_subtitle.txt", subtileLabel:"Spanish"}
+					],
+					//audio visualizer
+					audioVisualizerLinesColor:"#0099FF",
+					audioVisualizerCircleColor:"#FFFFFF",
+					//advertisement on pause window
+					aopwTitle:"Advertisement",
+					aopwSource:"",
+					aopwWidth:400,
+					aopwHeight:240,
+					aopwBorderSize:6,
+					aopwTitleColor:"#FFFFFF",
+					//playback rate / speed
+					showPlaybackRateButton:"yes",
+					defaultPlaybackRate:"1", //0.25, 0.5, 1, 1.25, 1.5, 2
+					//embed window
+					embedWindowCloseButtonMargins:0,
+					borderColor:"#333333",
+					mainLabelsColor:"#FFFFFF",
+					secondaryLabelsColor:"#a1a1a1",
+					shareAndEmbedTextColor:"#5a5a5a",
+					inputBackgroundColor:"#000000",
+					inputColor:"#FFFFFF"
+				});				
+			});
+		</script>
+	</head>
+
+	<body style="background-color:#aaaaaa;">	
+		<div id="myDiv" style="margin:auto;"></div>
+	</body>
+	
+	<!-- Annotations -->
+	<ul id="fwdAnnotations" style="display:none">
+		<li data-start-time="00:00:01" data-end-time="00:00:29" data-left="40" data-top="45" data-show-close-button="yes" data-normal-state-class="EVPAnnotationNormal">
+			<div> Annotations like this can be added with ease!</div>
+		</li>
+		
+		<li data-start-time="00:00:02" data-end-time="00:00:29" data-left="40" data-top="85" data-show-close-button="yes" data-click-source="http://www.webdesign-flash.ro" data-click-source-target="_blank" data-normal-state-class="EVPAnnotationLinkNormal" data-selected-state-class="EVPAnnotationLinkSelected">
+			<div><span style="font-weight:bold; text-decoration: underline;">LINK</span> support, href and target can be specified, also animation between annotation states is possible as you can see here on hover.</div>
+		</li>
+		
+		<li data-start-time="00:00:03" data-end-time="00:00:29" data-left="40" data-top="167" data-show-close-button="yes" data-click-source="alert('This is a javascript function called using the annotations feature of Easy Video Player!');" data-click-source-target="_blank" data-normal-state-class="EVPAnnotationJavascriptNormal" data-selected-state-class="EVPAnnotationJavascriptSelected">
+			<div><span <span style="font-weight:bold; text-decoration: underline;">JAVASCRIPT</span> support, a javascript function can be called on click.</div>
+		</li>
+		
+		<li data-start-time="00:00:04" data-end-time="00:00:29" data-left="460" data-top="46" data-normal-state-class="EVPAnnotationCSSNormal">
+			<div>
+			<p><span style="color:#0099FF; font-familly:myFont; font-weight:bold;">FULL CSS SUPPORT</span></p>
+			<p><span style="color:#FFFFFF; font-familly:myFont; font-weight:bold;">OPTIONAL CLOSE BUTTON</span></div></p>
+			<p><span style="color:#0099FF; font-familly:myFont; font-weight:bold;">FULL HTML SUPPORT</span></div></p>
+			<p>The <span style="color:#0099FF; font-familly:myFont; font-weight:bold; text-decoration: underline;">start</span> / <span style="color:#0099FF; font-familly:myFont; font-weight:bold; text-decoration: underline;">show</span> time and <span style="color:#FFFFFF; font-familly:myFont; font-weight:bold; text-decoration: underline;">end</span> / <span style="color:#FFFFFF; font-familly:myFont; font-weight:bold; text-decoration: underline;">stop</span> time for each annotation can be specified with ease.<p>
+		</li>
+		
+		<li data-start-time="00:00:32" data-end-time="00:01:06" data-left="398" data-top="45" data-show-close-button="no" data-normal-state-class="EVPAnnotationAPINormal">
+			<div>ANNOTATIONS CAN BE USED TO CALL API METHODS!</div>
+		</li>
+		
+		<li data-start-time="00:00:33" data-end-time="00:01:06" data-left="640" data-top="85" data-show-close-button="no" data-click-source="player2.play();" data-normal-state-class="EVPAnnotationPlayNormal" data-selected-state-class="EVPAnnotationPlaySelected">
+			<div>play</div>
+		</li>
+		
+		<li data-start-time="00:00:34" data-end-time="00:01:06" data-left="640" data-top="125" data-show-close-button="no" data-click-source="player2.pause();" data-normal-state-class="EVPAnnotationPlayNormal" data-selected-state-class="EVPAnnotationPlaySelected">
+			<div>pause</div>
+		</li>
+		
+		<li data-start-time="00:00:35" data-end-time="00:01:06" data-left="640" data-top="165" data-show-close-button="no" data-click-source="player2.scrub(0.6);" data-normal-state-class="EVPAnnotationPlayNormal" data-selected-state-class="EVPAnnotationPlaySelected">
+			<div>scrub to 60%</div>
+		</li>
+		
+		<li data-start-time="00:00:36" data-end-time="00:01:06" data-left="640" data-top="205" data-show-close-button="no" data-click-source="player2.setVolume(0.5);" data-normal-state-class="EVPAnnotationPlayNormal" data-selected-state-class="EVPAnnotationPlaySelected">
+			<div>set volume to 50%</div>
+		</li>
+		
+		<li data-start-time="00:00:37" data-end-time="00:01:06" data-left="640" data-top="245" data-show-close-button="no" data-click-source="player2.goFullScreen();" data-normal-state-class="EVPAnnotationPlayNormal" data-selected-state-class="EVPAnnotationPlaySelected">
+			<div>go full screen</div>
+		</li>
+		
+	</ul>
+	
+	</body>
+
+	
+</html>
+
+
+
+

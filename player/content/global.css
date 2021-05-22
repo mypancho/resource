@@ -1,0 +1,134 @@
+/* Subtitle */
+.EVPSubtitle{
+	font-family:Arial;
+	text-align:center;
+	color:#FFFFFF;
+	text-shadow: 0px 0px 1px #000000;
+	font-size:20px;
+	line-height:24px;
+    font-weight:600;
+	margin:0px;
+	padding:0px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:12px;
+}
+
+/* Annotations */
+.EVPAnnotationNormal{
+	font:Arial;
+	width: 296px !important;
+	padding:10px !important;
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	color:#FFFFFF !important;
+	background: rgba(31, 31, 31, 1) !important;
+}
+
+.EVPAnnotationLinkNormal{
+	font:Arial;
+	width: 320px !important;
+	padding:10px !important;
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	color:#000000 !important;
+	line-height:18px !important;
+	background: rgba(0,153,255,1) !important;
+}
+
+.EVPAnnotationLinkSelected{
+	font:Arial;
+	width: 320px !important;
+	padding:10px !important;
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	color:#FFFFFF !important;
+	line-height:18px !important;
+	background: rgba(31, 31, 31, 1) !important;
+}
+
+.EVPAnnotationJavascriptNormal{
+	font:Arial;
+	width: 320px !important;
+	padding:10px !important;
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	color:#000000 !important;
+	line-height:18px !important;
+	background: rgba(255, 255, 255, 1) !important;
+}
+
+.EVPAnnotationJavascriptSelected{
+	font:Arial;
+	width: 320px !important;
+	padding:10px !important;
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	color:#FFFFFF !important;
+	line-height:18px !important;
+	background: rgba(0,153,255,1) !important;
+}
+
+.EVPAnnotationCSSNormal{
+	font:Arial !important;
+	text-align: center !important;
+	width: 280px !important;
+	padding:10px !important;
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	color:#FFFFFF !important;
+	line-height:20px !important;
+	background: rgba(0,0,0, .8) !important;
+}
+
+.EVPAnnotationCSSNormal p{
+	padding:0px !important;
+	margin:0px !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important; 
+}
+
+.EVPAnnotationAPINormal{
+	font:Arial;
+	text-align:center !important;
+	width: 370px !important;
+	padding:6px !important;
+	color:#FFFFFF !important;
+	background: rgba(31, 31, 31, 1) !important;
+}
+
+.EVPAnnotationPlayNormal{
+	font:Arial;
+	text-align:center !important;
+	width: 120px !important;
+	padding:10px !important;
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	color:#000000 !important;
+	line-height:18px !important;
+	border-style: solid !important;
+    border-width: 1px !important;
+	border-color: #999999 !important;
+	border-radius:8px !important;
+	background: rgba(255, 255, 255, 1) !important;
+	box-shadow: 1px 1px 1px #999999 !important;
+}
+
+.EVPAnnotationPlaySelected{
+	font:Arial;
+	text-align:center !important;
+	width: 120px !important;
+	padding:10px !important;
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	color:#FFFFFF !important;
+	line-height:18px !important;
+	border-style: solid !important;
+    border-width: 1px !important;
+	border-color: #FFFFFF !important;
+	border-radius:8px !important;
+	background: rgba(0,153,255,1) !important;
+	box-shadow: 1px 1px 1px #999999 !important;
+}
+
+

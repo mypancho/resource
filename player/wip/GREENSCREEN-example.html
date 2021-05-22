@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	
+	<title>Easy Video Player</title>
+	
+	<link rel="stylesheet" type="text/css" href="content/global.css">
+	<script type="text/javascript" src="java/FWDEVPlayer.js"></script>
+
+	<style> 
+		@font-face{
+			font-family:myFont;
+			src: url(font/Lato-Lig.ttf);
+		}
+	</style>
+	
+	<script type="text/javascript">
+		FWDEVPUtils.onReady(function(){
+		
+			FWDEVPlayer.videoStartBehaviour = "stop";
+		
+			new FWDEVPlayer({		
+				//main settings
+				instanceName:"player1",
+				parentId:"myDiv",
+				mainFolderPath:"content",
+				initializeOnlyWhenVisible:"no",
+				skinPath:"minimal_skin_dark",
+				displayType:"responsive",
+				autoScale:"yes",
+				fillEntireVideoScreen:"no",
+				openDownloadLinkOnMobile:"no",
+				useHEXColorsForSkin:"no",
+				normalHEXButtonsColor:"#FF0000",
+				selectedHEXButtonsColor:"#FFFFFF",
+				privateVideoPassword:"428c841430ea18a70f7b06525d4b748a",
+				startAtTime:"",
+				stopAtTime:"",
+				startAtVideoSource:2,
+				videoSource:[
+					{source:"content/videos/dragon.mp4", label:"", videoType:"greenScreenVideo"}
+				],
+				posterPath:"content/posters/dragon-poster.png",
+				showErrorInfo:"yes",
+				rightClickContextMenu:"default",
+				useChromeless:"no",
+				addKeyboardSupport:"yes",
+				disableDoubleClickFullscreen:"yes",
+				autoPlay:"no",
+				loop:"no",
+				maxWidth:485,
+				maxHeight:273,
+				volume:.8,
+				greenScreenTolerance:200,
+				backgroundColor:"transparent",
+				posterBackgroundColor:"transparent",
+				//logo settings
+				showLogo:"no",
+				hideLogoWithController:"yes",
+				logoPosition:"topRight",
+				logoLink:"http://www.webdesign-flash.ro",
+				logoPath:"",
+				logoMargins:5,
+				//controller settings
+				showController:"yes",
+				showControllerWhenVideoIsStopped:"yes",
+				showVolumeScrubber:"yes",
+				showVolumeButton:"yes",
+				showTime:"yes",
+				showQualityButton:"no",
+				showShareButton:"no",
+				showEmbedButton:"no",
+				showDownloadButton:"no",
+				showFullScreenButton:"no",
+				repeatBackground:"yes",
+				controllerHeight:41,
+				controllerHideDelay:3,
+				startSpaceBetweenButtons:7,
+				spaceBetweenButtons:9,
+				mainScrubberOffestTop:14,
+				scrubbersOffsetWidth:4,
+				timeOffsetLeftWidth:5,
+				timeOffsetRightWidth:3,
+				volumeScrubberWidth:80,
+				volumeScrubberOffsetRightWidth:0,
+				timeColor:"#888888",
+				youtubeQualityButtonNormalColor:"#888888",
+				youtubeQualityButtonSelectedColor:"#FFFFFF",
+				//advertisement on pause window
+				aopwTitle:"Advertisement",
+				aopwSource:"",
+				aopwWidth:400,
+				aopwHeight:240,
+				aopwBorderSize:6,
+				aopwTitleColor:"#FFFFFF",
+				//playback rate / speed
+				showPlaybackRateButton:"no",
+				defaultPlaybackRate:"1", //0.25, 0.5, 1, 1.25, 1.5, 2
+				//embed window
+				embedWindowCloseButtonMargins:0,
+				borderColor:"#333333",
+				mainLabelsColor:"#FFFFFF",
+				secondaryLabelsColor:"#a1a1a1",
+				shareAndEmbedTextColor:"#5a5a5a",
+				inputBackgroundColor:"#000000",
+				inputColor:"#FFFFFF",
+				//subtitles
+				showSubtitleButton:"no",
+				subtitlesOffLabel:"Subtitle off",
+				startAtSubtitle:1,
+				subtitlesSource:[],
+				//annotations
+				annotiationsListId:"none",
+				showAnnotationsPositionTool:"no",
+				//ads
+				openNewPageAtTheEndOfTheAds:"no",
+				adsSource:[],
+				adsButtonsPosition:"right",
+				skipToVideoText:"You can skip to video in: ",
+				skipToVideoButtonText:"Skip Ad",
+				timeToHoldAds:4,
+				adsTextNormalColor:"#999999",
+				adsTextSelectedColor:"#FFFFFF",
+				adsBorderNormalColor:"#666666",
+				adsBorderSelectedColor:"#FFFFFF"
+			});
+			
+			new FWDEVPlayer({		
+				//main settings
+				useYoutube:"no",
+				useVimeo:"no",
+				instanceName:"player2",
+				parentId:"fixedDiv",
+				mainFolderPath:"content",
+				skinPath:"minimal_skin_dark",
+				displayType:"responsive",
+				autoScale:"yes",
+				fillEntireVideoScreen:"no",
+				useHEXColorsForSkin:"no",
+				normalHEXButtonsColor:"#FF0000",
+				selectedHEXButtonsColor:"#FFFFFF",
+				startAtVideoSource:2,
+				videoSource:[
+					{source:"content/videos/zombie.mp4", label:"", videoType:"greenScreenVideo"}
+				],
+				posterPath:"content/posters/poster-zombie.png",
+				rightClickContextMenu:"default",
+				useChromeless:"no",
+				addKeyboardSupport:"yes",
+				disableDoubleClickFullscreen:"yes",
+				autoPlay:"no",
+				loop:"no",
+				maxWidth:300,
+				maxHeight:300,
+				volume:.8,
+				greenScreenTolerance:200,
+				backgroundColor:"transparent",
+				posterBackgroundColor:"transparent",
+				//logo settings
+				showLogo:"no",
+				hideLogoWithController:"yes",
+				logoPosition:"topRight",
+				logoLink:"http://www.webdesign-flash.ro",
+				logoPath:"",
+				logoMargins:5,
+				//controller settings
+				showController:"no",
+				showControllerWhenVideoIsStopped:"yes",
+				showVolumeScrubber:"yes",
+				showVolumeButton:"yes",
+				showTime:"yes",
+				showQualityButton:"no",
+				showShareButton:"no",
+				showEmbedButton:"no",
+				showDownloadButton:"no",
+				showFullScreenButton:"no",
+				repeatBackground:"yes",
+				controllerHeight:41,
+				controllerHideDelay:3,
+				startSpaceBetweenButtons:7,
+				spaceBetweenButtons:9,
+				mainScrubberOffestTop:14,
+				scrubbersOffsetWidth:4,
+				timeOffsetLeftWidth:5,
+				timeOffsetRightWidth:3,
+				volumeScrubberWidth:80,
+				volumeScrubberOffsetRightWidth:0,
+				timeColor:"#888888",
+				youtubeQualityButtonNormalColor:"#888888",
+				youtubeQualityButtonSelectedColor:"#FFFFFF",
+				//playback rate / speed
+				showPlaybackRateButton:"no",
+				defaultPlaybackRate:"1", //0.25, 0.5, 1, 1.25, 1.5, 2
+				//embed window
+				embedWindowCloseButtonMargins:0,
+				borderColor:"#333333",
+				mainLabelsColor:"#FFFFFF",
+				secondaryLabelsColor:"#a1a1a1",
+				shareAndEmbedTextColor:"#5a5a5a",
+				inputBackgroundColor:"#000000",
+				inputColor:"#FFFFFF",
+				//subtitles
+				showSubtitleButton:"no",
+				subtitlesOffLabel:"Subtitle off",
+				startAtSubtitle:1,
+				subtitlesSource:[],
+				//annotations
+				annotiationsListId:"none",
+				showAnnotationsPositionTool:"no",
+				//ads
+				openNewPageAtTheEndOfTheAds:"no",
+				adsSource:[],
+				adsButtonsPosition:"right",
+				skipToVideoText:"You can skip to video in: ",
+				skipToVideoButtonText:"Skip Ad",
+				timeToHoldAds:4,
+				adsTextNormalColor:"#999999",
+				adsTextSelectedColor:"#FFFFFF",
+				adsBorderNormalColor:"#666666",
+				adsBorderSelectedColor:"#FFFFFF"
+			});
+			
+			//######################################################//
+			//Here is the code to positioned the fixed video player
+			//######################################################//
+			var fixedDiv_el = document.getElementById("fixedDiv");
+			
+			positionFixedDiv();
+			setTimeout( function(){
+				positionFixedDiv();
+			}, 300);
+			
+			
+			window.addEventListener("resize", onResizeHandler);
+			
+			function onResizeHandler(){
+				positionFixedDiv();
+			}
+
+			function positionFixedDiv(){
+				windowW = FWDEVPUtils.getViewportSize().w;
+				windowH = FWDEVPUtils.getViewportSize().h;
+				
+				
+				/* Here is the math behind the postioning, windowW represents the total browser visible width and windowH represents the total browser visible height*/
+				
+				//Position bottom right
+				fixedDiv_el.style.left = (windowW - 300)  + "px";
+				fixedDiv_el.style.top = (windowH - 300)  + "px";
+				
+				//Position bottom left
+				//fixedDiv_el.style.left = (windowW - 300)  + "px";
+				//fixedDiv_el.style.top = "0px";
+			};
+			
+		});
+	</script>
+</head>
+
+<body style="background-color:#999999;">	
+	<p style="color:#FFFFFF; width:480px; margin:auto; align:center;" >Please note the "green screen video" feature will only work online on a http or https protocol. Unfortunately manipulating pixels local is not possible  for security reasons. There is also the code included about how to add the player at a fixed position over your page so please check the page source or open this file in a text editor for reference.</p>
+	<br>
+	<div id="myDiv" style="margin:auto;"></div>
+	<div id="fixedDiv" style="position:fixed; width:300; height:300;"></div>
+</body>
+</html>
